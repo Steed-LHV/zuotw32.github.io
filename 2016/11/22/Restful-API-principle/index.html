@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      Restful API principle | Requiem of Souls 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="zuotw32">
+    
+    
+
+    <meta name="description" content="RESTful API1. Use nouns but no verbs2. Use plural nouns/books instead of /book
+/dogs instead of /dog
+3. Use proper HTTP Method to alter the stateDo not use GET for state changes:e.g: GET /rooms/508/op">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Restful API principle | Requiem of Souls">
+<meta property="og:url" content="http://yoursite.com/2016/11/22/Restful-API-principle/index.html">
+<meta property="og:site_name" content="Requiem of Souls">
+<meta property="og:description" content="RESTful API1. Use nouns but no verbs2. Use plural nouns/books instead of /book
+/dogs instead of /dog
+3. Use proper HTTP Method to alter the stateDo not use GET for state changes:e.g: GET /rooms/508/op">
+<meta property="og:updated_time" content="2016-11-22T07:57:25.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Restful API principle | Requiem of Souls">
+<meta name="twitter:description" content="RESTful API1. Use nouns but no verbs2. Use plural nouns/books instead of /book
+/dogs instead of /dog
+3. Use proper HTTP Method to alter the stateDo not use GET for state changes:e.g: GET /rooms/508/op">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">Requiem of Souls</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+        <p class="panel-cover__description">
+          Bits &amp; Pieces
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">Restful API principle</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2016-11-22" class="post-meta__date date">2016-11-22</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h2 id="RESTful-API"><a href="#RESTful-API" class="headerlink" title="RESTful API"></a>RESTful API</h2><h3 id="1-Use-nouns-but-no-verbs"><a href="#1-Use-nouns-but-no-verbs" class="headerlink" title="1. Use nouns but no verbs"></a>1. Use nouns but no verbs</h3><h3 id="2-Use-plural-nouns"><a href="#2-Use-plural-nouns" class="headerlink" title="2. Use plural nouns"></a>2. Use plural nouns</h3><pre><code>/books instead of /book
+/dogs instead of /dog
+</code></pre><h3 id="3-Use-proper-HTTP-Method-to-alter-the-state"><a href="#3-Use-proper-HTTP-Method-to-alter-the-state" class="headerlink" title="3. Use proper HTTP Method to alter the state"></a>3. Use proper HTTP Method to alter the state</h3><p>Do not use GET for state changes:<br>e.g: GET /rooms/508/open</p>
+<p>HTTP status codes:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">200 – OK – Eyerything is working</div><div class="line">201 – OK – New resource has been created</div><div class="line">204 – OK – The resource was successfully deleted</div><div class="line"></div><div class="line">304 – Not Modified – The client can use cached data</div><div class="line"></div><div class="line">400 – Bad Request – The request was invalid or cannot be served. The exact error should be explained in the error payload. E.g. „The JSON is not valid“</div><div class="line">401 – Unauthorized – The request requires an user authentication</div><div class="line">403 – Forbidden – The server understood the request, but is refusing it or the access is not allowed.</div><div class="line">404 – Not found – There is no resource behind the URI.</div><div class="line">422 – Unprocessable Entity – Should be used if the server cannot process the enitity, e.g. if an image cannot be formatted or mandatory fields are missing in the payload.</div><div class="line"></div><div class="line">500 – Internal Server Error – API developers should avoid this error. If an error occurs in the global catch blog, the stracktrace should be logged and not returned as response.</div></pre></td></tr></table></figure></p>
+<h3 id="4-Use-sub-resources-for-relations"><a href="#4-Use-sub-resources-for-relations" class="headerlink" title="4. Use sub-resources for relations"></a>4. Use sub-resources for relations</h3><p>If a resource is related to another resource use subresources.<br>e.g : GET /rooms/911/dogs return a list of dogs of room 911<br>      GET /rooms/911/dogs/3 return #3 dog</p>
+<h3 id="5-Provide-filtering-sorting-field-selection-and-paging-for-collections"><a href="#5-Provide-filtering-sorting-field-selection-and-paging-for-collections" class="headerlink" title="5. Provide filtering, sorting, field selection and paging for collections"></a>5. Provide filtering, sorting, field selection and paging for collections</h3>
+  </section>
+
+  
+  
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
