@@ -17,24 +17,21 @@
     
 
     <meta name="description" content="RESTful API1. Use nouns but no verbsDon’t use such as: /getAllCars, /CreateallMovies etc.
-2. Use plural nouns/books instead of /book
-/dogs instead of /dog
-3. Use proper HTTP Method to alter the stateD">
+2. Use plural nouns12/books instead of /book/dogs instead of /dog
+3. Use proper HTTP Method to alter the state">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Restful API principle | Requiem of Souls">
 <meta property="og:url" content="http://yoursite.com/2016/11/22/Restful-API-principle/index.html">
 <meta property="og:site_name" content="Requiem of Souls">
 <meta property="og:description" content="RESTful API1. Use nouns but no verbsDon’t use such as: /getAllCars, /CreateallMovies etc.
-2. Use plural nouns/books instead of /book
-/dogs instead of /dog
-3. Use proper HTTP Method to alter the stateD">
-<meta property="og:updated_time" content="2016-11-22T08:01:51.000Z">
+2. Use plural nouns12/books instead of /book/dogs instead of /dog
+3. Use proper HTTP Method to alter the state">
+<meta property="og:updated_time" content="2016-11-22T08:03:11.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Restful API principle | Requiem of Souls">
 <meta name="twitter:description" content="RESTful API1. Use nouns but no verbsDon’t use such as: /getAllCars, /CreateallMovies etc.
-2. Use plural nouns/books instead of /book
-/dogs instead of /dog
-3. Use proper HTTP Method to alter the stateD">
+2. Use plural nouns12/books instead of /book/dogs instead of /dog
+3. Use proper HTTP Method to alter the state">
     
     
     
@@ -185,12 +182,12 @@ classes that you can use:
 
   <section id="post-content" class="article-content post">
     <h2 id="RESTful-API"><a href="#RESTful-API" class="headerlink" title="RESTful API"></a>RESTful API</h2><h3 id="1-Use-nouns-but-no-verbs"><a href="#1-Use-nouns-but-no-verbs" class="headerlink" title="1. Use nouns but no verbs"></a>1. Use nouns but no verbs</h3><p>Don’t use such as: /getAllCars, /CreateallMovies etc.</p>
-<h3 id="2-Use-plural-nouns"><a href="#2-Use-plural-nouns" class="headerlink" title="2. Use plural nouns"></a>2. Use plural nouns</h3><pre><code>/books instead of /book
-/dogs instead of /dog
-</code></pre><h3 id="3-Use-proper-HTTP-Method-to-alter-the-state"><a href="#3-Use-proper-HTTP-Method-to-alter-the-state" class="headerlink" title="3. Use proper HTTP Method to alter the state"></a>3. Use proper HTTP Method to alter the state</h3><p>Do not use GET for state changes:<br>e.g: GET /rooms/508/open</p>
+<h3 id="2-Use-plural-nouns"><a href="#2-Use-plural-nouns" class="headerlink" title="2. Use plural nouns"></a>2. Use plural nouns</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">/books instead of /book</div><div class="line">/dogs instead of /dog</div></pre></td></tr></table></figure>
+<h3 id="3-Use-proper-HTTP-Method-to-alter-the-state"><a href="#3-Use-proper-HTTP-Method-to-alter-the-state" class="headerlink" title="3. Use proper HTTP Method to alter the state"></a>3. Use proper HTTP Method to alter the state</h3><p>Do not use GET for state changes:<br>e.g: GET /rooms/508/open</p>
 <p>HTTP status codes:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">200 – OK – Eyerything is working</div><div class="line">201 – OK – New resource has been created</div><div class="line">204 – OK – The resource was successfully deleted</div><div class="line"></div><div class="line">304 – Not Modified – The client can use cached data</div><div class="line"></div><div class="line">400 – Bad Request – The request was invalid or cannot be served. The exact error should be explained in the error payload. E.g. „The JSON is not valid“</div><div class="line">401 – Unauthorized – The request requires an user authentication</div><div class="line">403 – Forbidden – The server understood the request, but is refusing it or the access is not allowed.</div><div class="line">404 – Not found – There is no resource behind the URI.</div><div class="line">422 – Unprocessable Entity – Should be used if the server cannot process the enitity, e.g. if an image cannot be formatted or mandatory fields are missing in the payload.</div><div class="line"></div><div class="line">500 – Internal Server Error – API developers should avoid this error. If an error occurs in the global catch blog, the stracktrace should be logged and not returned as response.</div></pre></td></tr></table></figure></p>
-<h3 id="4-Use-sub-resources-for-relations"><a href="#4-Use-sub-resources-for-relations" class="headerlink" title="4. Use sub-resources for relations"></a>4. Use sub-resources for relations</h3><p>If a resource is related to another resource use subresources.<br>e.g : <figure class="highlight plain"><figcaption><span>/rooms/911/dogs return a list of dogs of room 911</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">GET /rooms/911/dogs/3 return #3 dog</div></pre></td></tr></table></figure></p>
-<h3 id="5-Provide-filtering-sorting-field-selection-and-paging-for-collections"><a href="#5-Provide-filtering-sorting-field-selection-and-paging-for-collections" class="headerlink" title="5. Provide filtering, sorting, field selection and paging for collections"></a>5. Provide filtering, sorting, field selection and paging for collections</h3>
+<h3 id="4-Use-sub-resources-for-relations"><a href="#4-Use-sub-resources-for-relations" class="headerlink" title="4. Use sub-resources for relations"></a>4. Use sub-resources for relations</h3><p>If a resource is related to another resource use subresources.<br>e.g : <figure class="highlight plain"><figcaption><span>/rooms/911/dogs return a list of dogs of room 911</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">	</div></pre></td></tr></table></figure></p>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">GET /rooms/911/dogs/3 return #3 dog</div></pre></td></tr></table></figure>
+</code></pre><h3 id="5-Provide-filtering-sorting-field-selection-and-paging-for-collections"><a href="#5-Provide-filtering-sorting-field-selection-and-paging-for-collections" class="headerlink" title="5. Provide filtering, sorting, field selection and paging for collections"></a>5. Provide filtering, sorting, field selection and paging for collections</h3>
   </section>
 
   
