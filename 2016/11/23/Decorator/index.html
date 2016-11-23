@@ -16,25 +16,25 @@
     
     
 
-    <meta name="description" content="The simplest decorator123@decoratordef func():	pass
+    <meta name="description" content="The simplest decorator123@decorator    def func():pass
 is equals to:
-123def func():	passfunc = decorartor(func)
-example12345678def makeitalic(func):	def wrapped():		return &amp;quot;&amp;lt;i&amp;gt;&amp;quot; + func()">
+123def func():    passfunc = decorartor(func)
+example12345678def makeitalic(func):	def wrapped():		return &amp;quot;&amp;lt;i&amp;gt;&amp;quot; + f">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Decorator | Requiem of Souls">
 <meta property="og:url" content="http://yoursite.com/2016/11/23/Decorator/index.html">
 <meta property="og:site_name" content="Requiem of Souls">
-<meta property="og:description" content="The simplest decorator123@decoratordef func():	pass
+<meta property="og:description" content="The simplest decorator123@decorator    def func():pass
 is equals to:
-123def func():	passfunc = decorartor(func)
-example12345678def makeitalic(func):	def wrapped():		return &amp;quot;&amp;lt;i&amp;gt;&amp;quot; + func()">
-<meta property="og:updated_time" content="2016-11-23T08:43:28.000Z">
+123def func():    passfunc = decorartor(func)
+example12345678def makeitalic(func):	def wrapped():		return &amp;quot;&amp;lt;i&amp;gt;&amp;quot; + f">
+<meta property="og:updated_time" content="2016-11-23T08:46:17.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Decorator | Requiem of Souls">
-<meta name="twitter:description" content="The simplest decorator123@decoratordef func():	pass
+<meta name="twitter:description" content="The simplest decorator123@decorator    def func():pass
 is equals to:
-123def func():	passfunc = decorartor(func)
-example12345678def makeitalic(func):	def wrapped():		return &amp;quot;&amp;lt;i&amp;gt;&amp;quot; + func()">
+123def func():    passfunc = decorartor(func)
+example12345678def makeitalic(func):	def wrapped():		return &amp;quot;&amp;lt;i&amp;gt;&amp;quot; + f">
     
     
     
@@ -184,9 +184,9 @@ classes that you can use:
   </header>
 
   <section id="post-content" class="article-content post">
-    <p>The simplest decorator<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">@decorator</div><div class="line">def func():</div><div class="line">	pass</div></pre></td></tr></table></figure></p>
+    <p>The simplest decorator<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">@decorator</div><div class="line">    def func():</div><div class="line">pass</div></pre></td></tr></table></figure></p>
 <p>is equals to:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">def func():</div><div class="line">	pass</div><div class="line">func = decorartor(func)</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">def func():</div><div class="line">    pass</div><div class="line">func = decorartor(func)</div></pre></td></tr></table></figure>
 <h3 id="example"><a href="#example" class="headerlink" title="example"></a>example</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">def makeitalic(func):</div><div class="line">	def wrapped():</div><div class="line">		return &quot;&lt;i&gt;&quot; + func() + &quot;&lt;/i&gt;&quot;</div><div class="line">	return wrapped</div><div class="line"></div><div class="line">@makeitalic</div><div class="line">def hello():</div><div class="line">	return &quot;hello world&quot;</div></pre></td></tr></table></figure>
 <h3 id="result"><a href="#result" class="headerlink" title="result"></a>result</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">In [6]: makeitalic(hello)</div><div class="line">Out[6]: &lt;function __main__.wrapped&gt;</div></pre></td></tr></table></figure>
 <h2 id="Decorator-the-func-with-parameters"><a href="#Decorator-the-func-with-parameters" class="headerlink" title="Decorator the func with parameters"></a>Decorator the func with parameters</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">In [1]: def makeitalic(func):</div><div class="line">   ...:     def wrapped(*args):</div><div class="line">   ...:         ret = func(*args)</div><div class="line">   ...:         return &apos;&lt;i&gt;&apos; + ret + &apos;&lt;/i&gt;&apos;</div><div class="line">   ...:     return wrapped</div><div class="line">   ...:</div><div class="line"></div><div class="line">In [2]: @makeitalic</div><div class="line">   ...: def hello(name):</div><div class="line">   ...:     return &apos;hello &#123;&#125;&apos;.format(name)</div><div class="line">   ...:</div><div class="line"></div><div class="line">In [3]: hello(zuo)</div></pre></td></tr></table></figure>
